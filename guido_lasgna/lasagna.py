@@ -21,14 +21,11 @@ def preparation_time_in_minutes(number_of_layers):
     :param number_of_layers: int - number of layers.
     :return: int - number of minutes spent making each layer
 
-    Function that takes the number of layers of the and returns how many minutes it          needs to be prepared based on the `PREPARATION_TIME`.
+    Function that takes the number of layers of the and returns how many minutes it needs to be prepared based on the `PREPARATION_TIME`.
     """
     
     return number_of_layers * 2
 
-
-
-#TODO: define the 'elapsed_time_in_minutes()' function below.
 
 def elapsed_time_in_minutes(number_of_layers, elapsed_bake_time):
     """Calculate the elapsed cooking time.
