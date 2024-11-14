@@ -7,7 +7,9 @@ def add_prefix_un(word):
     :param word: str - containing the root word.
     :return: str - of root word prepended with 'un'.
     """
-    new_word = [char for char in word]
+    new_word = []
+    for char in word:
+        new_word.append(char)
     new_word.insert(0, 'un')
     return ''.join(new_word)
 
@@ -26,7 +28,7 @@ def make_word_groups(*vocab_words):
     For example: list('en', 'close', 'joy', 'lighten'),
     produces the following string: 'en :: enclose :: enjoy :: enlighten'.
     """
-    list_of_words = (vocab_words)
+    list_of_words = vocab_words
     new_list = [list_of_words[0]]
     for i in list_of_words[1:]:
         if list_of_words[0] == 'en':
@@ -43,7 +45,6 @@ def make_word_groups(*vocab_words):
             new_list.append(word)
     return ' :: '.join(new_list)
 
-print(make_word_groups('auto', 'close', 'joy', 'lighten'))
 
 def remove_suffix_ness(word):
     """Remove the suffix from the word while keeping spelling in mind.
