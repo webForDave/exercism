@@ -34,23 +34,30 @@ def higher_card(card_one, card_two):
     2.  'A' (ace card) = 1
     3.  '2' - '10' = numerical value.
     """
-    face_cards = ['J', 'Q', 'K']
-    if card_one in face_cards:
-        face_card_one = 10
-    elif card_two in face_cards:
-        face_card_two = 10
-    elif card_one == 'A' or card_two == 'A':
-        ace_card = 1
 
+    if card_one in ['J', 'Q', 'K']:
+        new_card_one = 10
+    elif card_one == 'A':
+        new_card_one = 1
+    else:
+        new_card_one = int(card_one)
 
-    if card_one > card_two:
+    if card_two in ['J', 'Q', 'K']:
+        new_card_two  = 10
+    elif card_two == 'A':
+        new_card_two = 1
+    else:
+        new_card_two = int(card_two)
+
+    if new_card_one > new_card_two:
         return card_one
-    elif card_two > card_one:
+    elif new_card_one < new_card_two:
         return card_two
-    elif card_one == card_two:
+    else:
         return card_one, card_two
-# print(higher_card('A', '5'))
 
+
+print(higher_card('K', 'A'))
 
 def value_of_ace(card_one, card_two):
     """Calculate the most advantageous value for the ace card.
@@ -79,7 +86,6 @@ def value_of_ace(card_one, card_two):
 
     both_cards_with_11 = (card_one + card_two) + 11
 
-    print(both_cards_with_11)
     if both_cards_with_11 < 21:
         return 11
     elif both_cards_with_11 > 21:
