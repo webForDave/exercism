@@ -100,7 +100,25 @@ def is_blackjack(card_one, card_two):
     3.  '2' - '10' = numerical value.
     """
 
-    pass
+    face_cards = ['J', 'Q', 'K']
+    if card_one in face_cards:
+        card_one = 10
+    if card_two in face_cards:
+        card_two = 10
+    if card_one == 'A':
+        card_one = 11
+    if card_two == 'A':
+        card_two = 11
+    if type(card_one) == str:
+        card_one = int(card_one)
+    if type(card_two) == str:
+        card_two = int(card_two)
+
+    sum_of_cards = card_one + card_two
+    if sum_of_cards == 21:
+        return True
+    else:
+        return False
 
 
 def can_split_pairs(card_one, card_two):
