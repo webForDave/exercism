@@ -155,4 +155,21 @@ def can_double_down(card_one, card_two):
     :return: bool - can the hand can be doubled down? (i.e. totals 9, 10 or 11 points).
     """
 
-    pass
+    face_cards = ['J', 'Q', 'K']
+    if card_one in face_cards:
+        card_one = 10
+    if card_two in face_cards:
+        card_two = 10
+    if card_one == 'A':
+        card_one = 1
+    if card_two == 'A':
+        card_two = 1
+    if type(card_one) == str:
+        card_one = int(card_one)
+    if type(card_two) == str:
+        card_two = int(card_two)
+
+    if card_one + card_two in [9, 10, 11]:
+        return True
+    else:
+        return False
