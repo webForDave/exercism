@@ -54,9 +54,19 @@ def approx_average_is_average(hand):
     :param hand: list - cards in hand.
     :return: bool - does one of the approximate averages equal the `true average`?
     """
+    actual_average = sum(hand) // len(hand)
+    first_and_last_values = [hand[0], hand[-1]]
 
-    pass
+    avg_first_and_last = sum(first_and_last_values) // 2
 
+    def median():
+        lenght = len(hand)
+        if lenght % 2 != 0:
+            middle_index = lenght // 2
+            return hand[middle_index]
+        
+    return True if avg_first_and_last == actual_average or median() == avg_first_and_last else False
+        
 
 def average_even_is_average_odd(hand):
     """Return if the (average of even indexed card values) == (average of odd indexed card values).
