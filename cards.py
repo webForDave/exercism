@@ -14,8 +14,6 @@ def get_rounds(number):
     rounds = [round_number for round_number in range(number, number+3)]
     return rounds
 
-print(get_rounds(27))
-
 
 def concatenate_rounds(rounds_1, rounds_2):
     """Concatenate two lists of round numbers.
@@ -25,7 +23,7 @@ def concatenate_rounds(rounds_1, rounds_2):
     :return: list - all rounds played.
     """
 
-    pass
+    return rounds_1 + rounds_2
 
 
 def list_contains_round(rounds, number):
