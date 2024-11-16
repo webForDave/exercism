@@ -57,7 +57,6 @@ def higher_card(card_one, card_two):
         return card_one, card_two
 
 
-print(higher_card('K', 'A'))
 
 def value_of_ace(card_one, card_two):
     """Calculate the most advantageous value for the ace card.
