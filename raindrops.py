@@ -18,20 +18,3 @@ def convert(number):
     if int_num % 7 == 0: result += 'Plong'
 
     return result if result else str(number)
-
-    # if int_num % 3 == 0 and int_num % 5 == 0 and int_num % 7 == 0:
-    #     return 'PlingPlangPlong'
-    # elif int_num %3 == 0 and int_num % 5 == 0:
-    #     return 'PlingPlang'
-    # elif int_num % 3 == 0 and int_num % 7 == 0:
-    #     return 'PlingPlong'
-    # elif int_num % 5 == 0 and int_num % 7 == 0:
-    #     return 'PlangPlong'
-    # elif int_num % 3 == 0:
-    #     return 'Pling'
-    # elif int_num % 5 == 0:
-    #     return 'Plang'
-    # elif int_num % 7 == 0:
-    #     return 'Plong'
-    # else:
-    #     return str(number)
