@@ -13,14 +13,11 @@ def convert(number):
     int_num = int(number)
     result = ''
 
-    if int_num % 3 == 0:
-        result += 'Pling'
-    if int_num % 5 == 0:
-        result += 'Plang'
-    if int_num % 7 == 0:
-        result += 'Plong'
+    if int_num % 3 == 0: result += 'Pling'
+    if int_num % 5 == 0: result += 'Plang'
+    if int_num % 7 == 0: result += 'Plong'
 
-    return result 
+    return result if result else str(number)
 
     # if int_num % 3 == 0 and int_num % 5 == 0 and int_num % 7 == 0:
     #     return 'PlingPlangPlong'
