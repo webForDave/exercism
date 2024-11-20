@@ -13,9 +13,7 @@ list_of_colors = [
 
 
 def color_code(color):
-    for i in range(len(list_of_colors)):
-        if list_of_colors[i] == color:
-            return i
+    return list_of_colors.index(color)
 
 def colors():
     return list_of_colors
