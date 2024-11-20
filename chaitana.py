@@ -74,7 +74,6 @@ def remove_the_last_person(queue):
     """
 
     return queue.pop()
-print(remove_the_last_person(queue=["Natasha", "Steve", "Eltran", "Natasha", "Rocket"]))
 
 
 def sorted_names(queue):
@@ -84,4 +83,5 @@ def sorted_names(queue):
     :return: list - copy of the queue in alphabetical order.
     """
 
-    pass
+    return sorted(queue)
+print(sorted_names(queue=["Natasha", "Steve", "Eltran", "Natasha", "Rocket"]))
