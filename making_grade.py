@@ -43,7 +43,6 @@ def above_threshold(student_scores, threshold):
         if value >= threshold:
             best_list.append(value)
     return best_list
-print(above_threshold(student_scores=[90,40,55,70,30,68,70,75,83,96], threshold=75))
 
 
 def letter_grades(highest):
