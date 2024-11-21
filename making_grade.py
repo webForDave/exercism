@@ -8,11 +8,11 @@ def round_scores(student_scores):
     :return: list - student scores *rounded* to nearest integer value.
     """
 
-    new_list = []
+    ranking = []
     for value in student_scores:
-        new_list.append(round(value))
+        ranking.append(round(value))
 
-    return new_list
+    return ranking
 
 
 def count_failed_students(student_scores):
@@ -70,8 +70,12 @@ def student_ranking(student_scores, student_names):
     :return: list - of strings in format ["<rank>. <student name>: <score>"].
     """
 
-    pass
 
+    ranking = []
+    for index, value in enumerate(student_scores, start=1):
+        ranking.append(f"{index}. {student_names[index - 1]}: {value}")
+    return ranking
+        
 
 def perfect_score(student_info):
     """Create a list that contains the name and grade of the first student to make a perfect score on the exam.
