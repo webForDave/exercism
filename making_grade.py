@@ -22,7 +22,14 @@ def count_failed_students(student_scores):
     :return: int - count of student scores at or below 40.
     """
 
-    pass
+    count = 0
+
+    for value in student_scores:
+        if value <= 40:
+            count += 1
+    return count
+
+print(count_failed_students([90,40,55,70,30,25,80,95,38,40]))
 
 
 def above_threshold(student_scores, threshold):
