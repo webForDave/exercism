@@ -29,8 +29,6 @@ def count_failed_students(student_scores):
             count += 1
     return count
 
-print(count_failed_students([90,40,55,70,30,25,80,95,38,40]))
-
 
 def above_threshold(student_scores, threshold):
     """Determine how many of the provided student scores were 'the best' based on the provided threshold.
@@ -40,7 +38,12 @@ def above_threshold(student_scores, threshold):
     :return: list - of integer scores that are at or above the "best" threshold.
     """
 
-    pass
+    best_list = []
+    for value in student_scores:
+        if value >= threshold:
+            best_list.append(value)
+    return best_list
+print(above_threshold(student_scores=[90,40,55,70,30,68,70,75,83,96], threshold=75))
 
 
 def letter_grades(highest):
