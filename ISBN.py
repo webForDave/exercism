@@ -1,10 +1,8 @@
 def is_valid(isbn):
-    isbn = isbn.replace('-', '')
-    isbn_as_list = list(isbn)
+    isbn_as_list = list(isbn.replace('-', ''))
     list_of_chars = list(map(str, range(1, 11)))
     list_of_chars.append('0')
     list_of_chars.append('X')
-    print(list_of_chars)
     digits = []
 
     if len(isbn_as_list) == 0:
