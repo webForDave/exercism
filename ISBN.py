@@ -1,7 +1,10 @@
 def is_valid(isbn):
     isbn = isbn.replace('-', '')
     isbn_as_list = list(isbn)
-    list_of_chars = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '0', 'X']
+    list_of_chars = list(map(str, range(1, 11)))
+    list_of_chars.append('0')
+    list_of_chars.append('X')
+    print(list_of_chars)
     digits = []
 
     if len(isbn_as_list) == 0:
@@ -28,4 +31,4 @@ def is_valid(isbn):
 
         return bool(sum(multiplied_vlues) % 11 == 0)
 
-print(is_valid("98245726788"))
+print(is_valid("3-598-21508-8"))
