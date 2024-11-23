@@ -59,7 +59,8 @@ def letter_grades(highest):
             86 <= "A" <= 100
     """
 
-    pass
+    interval = (highest - 40) // 4
+    return [41 + interval * i for i in range(4)]
 
 
 def student_ranking(student_scores, student_names):
