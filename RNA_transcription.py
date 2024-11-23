@@ -1,15 +1,15 @@
 def to_rna(dna_strand):
-    new_strand = []
+    new_strand = ''
 
     for char in list(dna_strand):
         if char == 'G':
-            new_strand.append('C')
+            new_strand += 'C'
         elif char == 'C':
-            new_strand.append('G')
+            new_strand += 'G'
         elif char == 'T':
-            new_strand.append('A')
+            new_strand +='A'
         elif char == 'A':
-            new_strand.append('U')
+            new_strand += 'U'
     return ''.join(new_strand)
 
 
