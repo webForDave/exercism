@@ -1,3 +1,5 @@
+import sys
+
 def steps(number):
 
     if number <= 0:
@@ -11,3 +13,5 @@ def steps(number):
             number = number / 2 if number % 2 == 0 else number * 3 + 1
             count += 1
     return count
+
+print(steps(int(sys.argv[1])))
