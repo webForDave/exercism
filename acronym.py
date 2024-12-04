@@ -1,7 +1,7 @@
 def abbreviate(words):
-    sentence = words.replace('-', ' ').replace('_', ' ').title().split()
+    words = words.replace('-', ' ').replace('_', ' ').title().split()
     acronyms = ''
-    for word in sentence:
+    for word in words:
         acronyms += word[0].title()
     return acronyms
 
