@@ -12,6 +12,3 @@ def abbreviate(words):
     for word in words:
         acronyms += word[0].title()
     return acronyms
-
-
-print(abbreviate("Portable Network Graphics"))
