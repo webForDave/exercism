@@ -1,17 +1,17 @@
-grains = []
-
 def square(number):
-    if number > 64 or number < 1:
-        raise ValueError('Square must be between 1 and 64')
-    for grain in range(1, number +1):
-        grains.append(grain)
+    n = number
 
-    return grains[number - 1]
-
-print(square(2))
+    if n not in range(1, 64+1):
+        raise ValueError("square must be between 1 and 64")
+    return 2 ** (n - 1)
 
 
 def total():
-    return sum(grains)
+    total = 0
+
+    for num in range(1, 64+1):
+        total += 2 ** (num - 1)
+    return total
+
 
 print(total())
