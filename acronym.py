@@ -1,14 +1,13 @@
 def abbreviate(words):
-    """Gives the abbreviation of a word.
+    """Generate the abbreviated form of a phrase.
     
-    :param words/phrase: str - argument to check acronym.
-    :return: str - abbreviated form of word/phrase.
+    :param words/phrase: str - Phrase to be abbreviated.
+    :return: str - Abbreviated phrase.
 
-    Function that takes a group of words, and convert them into the abbreviated form.
+    This function takes a phrase as argument, removes every separators including 
+    spaces, and hyphens, captitalizes the initials of every word in the phrase
+    and returns the abreviated form of the phrase. 
     """
     
-    words = words.replace('-', ' ').replace('_', ' ').title().split()
-    acronyms = ''
-    for word in words:
-        acronyms += word[0].title()
-    return acronyms
+    words = words.replace('-', '').replace('_', '').title().split()
+    return ''.join(char[0] for char in words)
