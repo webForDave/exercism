@@ -1,6 +1,6 @@
 ## Exercism Solutions Repository 
 
-This repository contains solutions to coding challenges from [Exercism](exercism.org). These challenges help improve problem solving skills and deepen understanding of programming concepts. 
+This repository contains solutions to coding challenges from [Exercism](https://exercism.org). These challenges help improve problem solving skills and deepen understanding of programming concepts. 
 
 ### Language 
 + Python
