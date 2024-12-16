@@ -16,4 +16,3 @@ def classify(number):
     return 'Perfect'
     
 
-print(classify(33550337))
