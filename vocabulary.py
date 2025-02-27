@@ -28,22 +28,23 @@ def make_word_groups(*vocab_words):
     For example: list('en', 'close', 'joy', 'lighten'),
     produces the following string: 'en :: enclose :: enjoy :: enlighten'.
     """
-    list_of_words = vocab_words
-    new_list = [list_of_words[0]]
-    for i in list_of_words[1:]:
-        if list_of_words[0] == 'en':
+    new_list = [vocab_words[0]]
+    for i in vocab_words[1:]:
+        if vocab_words[0] == 'en':
             word = f'en{i}'
             new_list.append(word)
-        elif list_of_words[0] == 'pre':
+        elif vocab_words[0] == 'pre':
             word = f'pre{i}'
             new_list.append(word)
-        if list_of_words[0] == 'auto':
+        if vocab_words[0] == 'auto':
             word = f'auto{i}'
             new_list.append(word)
-        if list_of_words[0] == 'inter':
+        if vocab_words[0] == 'inter':
             word = f'inter{i}'
             new_list.append(word)
     return ' :: '.join(new_list)
+
+print(make_word_groups('pre', 'postion', 'tend'))
 
 
 def remove_suffix_ness(word):

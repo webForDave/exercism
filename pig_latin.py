@@ -16,4 +16,4 @@ def translate(text):
     return ''.join(text_as_list)
 
 
-print(translate("thrush"))
+print(translate("chair"))
