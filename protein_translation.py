@@ -9,11 +9,7 @@ def proteins(strand):
     stop = ['UAA', 'UAG', 'UGA']
 
     groups = []
-    codons = []
-
-    for char in range(0, len(strand), 3):
-        codons.append(strand[char : char + 3])
-
+    codons = [strand[char: char + 3] for char in range(0, len(strand), 3)]
 
     for codon in codons:
         if codon in phenylalanine:
