@@ -8,7 +8,31 @@ def proteins(strand):
     tryptophan = ['UGG']
     stop = ['UAA', 'UAG', 'UGA']
 
-    groups = [strand[i:i+3] for i in range(0, len(strand), 3)]
+    groups = []
+    codons = []
+
+    for char in range(0, len(strand), 3):
+        codons.append(strand[char : char + 3])
+
+
+    for codon in codons:
+        if codon in phenylalanine:
+            groups.append("Phenylalanine")
+        elif codon in leucine:
+            groups.append("Leucine")
+        elif codon in methionine:
+            groups.append("Methionine")
+        elif codon in serine:
+            groups.append("Serine")
+        elif codon in tyrosine:
+            groups.append("Tyrosine")
+        elif codon in cysteine:
+            groups.append("Cysteine")
+        elif codon in tryptophan:
+            groups.append("Tryptophan")
+        elif codon in stop:
+            break
+    return groups
 
 
 print(proteins("AUGUUUUCUUAAAUG"))
