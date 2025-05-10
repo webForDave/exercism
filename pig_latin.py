@@ -12,9 +12,13 @@ def translate(text):
                     break
                 removed_consnants.append(text_as_list[0])
                 text_as_list.pop(0)
+            if "".join(text_as_list[0:2]) == "qu":
+                removed_consnants.append("".join(text_as_list[0 : 2]))
+                text_as_list.pop(0)
+                text_as_list.pop(0)
         text_as_list += removed_consnants
         text_as_list.append("ay")
 
     return ''.join(text_as_list)
 
-print(translate("my"))
+print(translate("quick"))
