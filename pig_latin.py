@@ -1,4 +1,4 @@
-def translate(text):
+def piggy(text):
     vowels = ['a', 'e', 'i', 'o', 'u']
     text_as_list = list(text)
     removed_consnants = []
@@ -21,5 +21,15 @@ def translate(text):
         text_as_list.append("ay")
 
     return ''.join(text_as_list)
+
+def translate(text):
+    words = text.split()
+    new_words = []
+    
+    if words:
+        for word in words:
+            new_words.append(piggy(word))
+        return " ".join(new_words)
+    return piggy(text)
 
 print(translate("quick"))
