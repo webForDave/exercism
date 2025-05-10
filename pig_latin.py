@@ -12,7 +12,13 @@ def translate(text):
                 text_as_list.pop(0)
         text_as_list += removed_consnants
         text_as_list.append("ay") 
-
+    elif text_as_list[0] not in vowels:
+        for _ in text_as_list:
+            if text_as_list[0] not in vowels:
+                removed_consnants.append(text_as_list[0])
+                text_as_list.pop(0)
+        text_as_list += removed_consnants
+        text_as_list.append("ay")
 
     return ''.join(text_as_list)
 
