@@ -1,3 +1,5 @@
+from math import pow
+
 def rebase(input_base, digits, output_base):
     power = len(digits) - 1
     dividend = 0
@@ -9,14 +11,13 @@ def rebase(input_base, digits, output_base):
     if output_base < 2: 
         raise ValueError("output base must be >= 2")
     
-
     for number in digits:
         if number < 0 or number >= input_base:
             raise ValueError("all digits must satisfy 0 <= d < input base")
-        dividend += number * (input_base**power)
+        dividend += number * int(pow(input_base, power))
         power -= 1
 
-    while dividend !=0 :
+    while dividend != 0:
         new_bases.insert(0, dividend % output_base)
         dividend = dividend // output_base 
 
@@ -25,4 +26,4 @@ def rebase(input_base, digits, output_base):
 
     return new_bases
 
-print(rebase(2, [1, 2, 1, 0, 1, 0], 10))
+print(rebase(16, [2, 10], 3))
