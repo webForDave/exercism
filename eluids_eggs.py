@@ -1,13 +1,11 @@
 def egg_count(display_value):
-    bits = []
-    dividend = display_value
-    sum = 0
+    bits_as_one = 0
 
-    while dividend != 0:
-        if dividend % 2 == 1:
-            sum +=1 
-        dividend //= 2
+    while display_value != 0:
+        if display_value % 2 == 1:
+            bits_as_one +=1 
+        display_value //= 2
 
-    return sum  
+    return bits_as_one  
 
 print(egg_count(2000000000))
