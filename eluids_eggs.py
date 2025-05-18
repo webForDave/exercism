@@ -4,12 +4,9 @@ def egg_count(display_value):
     sum = 0
 
     while dividend != 0:
-        bits.insert(0, dividend % 2)
+        if dividend % 2 == 1:
+            sum +=1 
         dividend //= 2
-
-    for bit in bits:
-        if bit == 1:
-            sum += 1
 
     return sum  
 
