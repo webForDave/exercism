@@ -1,4 +1,0 @@
-def prime(number):
-    pass
-
-
