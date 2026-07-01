@@ -14,7 +14,7 @@ def steps(number):
 
     Examples: 
         >>> steps(12)
-        9
+        9 
     
     """
     total_steps = 0
