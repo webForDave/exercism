@@ -52,4 +52,4 @@ def elapsed_time_in_minutes(number_of_layers, elapsed_bake_time):
     Returns:
         int: total number of minutes spent in the kitchen.
     """
-    return elapsed_bake_time + (number_of_layers * 2)
+    return elapsed_bake_time + (number_of_layers * PREPARATION_TIME)
