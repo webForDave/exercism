@@ -14,12 +14,7 @@ def square(number):
     if number not in range(1, 65):
         raise ValueError("square must be between 1 and 64")
 
-    total_on_square = 1
-
-    for x in range(1, number + 1):
-        if x == 1: continue
-        total_on_square += total_on_square
-    return total_on_square
+    return 2 ** (number - 1)
 
 
 def total():
@@ -33,4 +28,3 @@ def total():
         total_on_square += square(x)
 
     return total_on_square
-
