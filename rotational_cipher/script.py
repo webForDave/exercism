@@ -19,6 +19,7 @@ def rotate(text: str, key: int):
         >>> rotate("omg", 5)
         "trl"
     """
+
     alphabets = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     new_text, encoded_text = text.lower(), []
 
@@ -27,18 +28,18 @@ def rotate(text: str, key: int):
             encoded_text.append(char)
             continue
         try:
-            # Try the direct addition – may raise IndexError if out of range
-            new_index = alphabets.index(char) + key
             if word == word.upper():
-                encoded_text.append(alphabets[new_index].upper())
+                encoded_text.append(alphabets[alphabets.index(char) + key].upper())
             else:
-                encoded_text.append(alphabets[new_index])
+                encoded_text.append(alphabets[alphabets.index(char) + key])
         except IndexError:
-            # If it goes out of range, wrap it using modulo by the alphabet length
-            safe_index = (alphabets.index(char) + key) % len(alphabets)
             if word == word.upper():
-                encoded_text.append(alphabets[safe_index].upper())
+                encoded_text.append(alphabets[alphabets.index(char) % key].upper())
             else:
-                encoded_text.append(alphabets[safe_index])
+                encoded_text.append(alphabets[alphabets.index(char) % key])
 
-    return "".join(encoded_text)
+    encoded_text = "".join(encoded_text)
+
+    return encoded_text
+
+print(rotate("O M G", 5))
