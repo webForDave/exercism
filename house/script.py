@@ -41,6 +41,6 @@ def recite(start_verse, end_verse):
     if start_verse == end_verse:
         return [verses[start_verse - 1]]
 
-    result = [verse for verse in verses[start_verse - 1: end_verse]]
+    result = verses[start_verse - 1: end_verse]
 
     return result
